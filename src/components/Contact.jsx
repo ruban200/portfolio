@@ -107,7 +107,7 @@ const Contact = () => {
                                     e.preventDefault()
                                     setStatus('sending')
                                     try {
-                                        const res = await fetch((import.meta.env.DEV ? 'http://localhost:5000' : '') + '/api/contact', {
+                                        const res = await fetch((import.meta.env.DEV ? 'http://localhost:5000' : 'https://contact-api-ruban200.vercel.app') + '/api/contact', {
                                             method: 'POST',
                                             headers: { 'Content-Type': 'application/json' },
                                             body: JSON.stringify({ name, email, message })

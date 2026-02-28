@@ -14,7 +14,7 @@ const Admin = () => {
         setStatus('loading')
         try {
             // Send the admin key in the header to authenticate
-            const res = await fetch((import.meta.env.DEV ? 'http://localhost:5000' : '') + '/api/contact', {
+            const res = await fetch((import.meta.env.DEV ? 'http://localhost:5000' : 'https://contact-api-ruban200.vercel.app') + '/api/contact', {
                 headers: { 'x-admin-key': password }
             })
 
@@ -36,7 +36,7 @@ const Admin = () => {
     const refreshData = async () => {
         setStatus('loading')
         try {
-            const res = await fetch((import.meta.env.DEV ? 'http://localhost:5000' : '') + '/api/contact', {
+            const res = await fetch((import.meta.env.DEV ? 'http://localhost:5000' : 'https://contact-api-ruban200.vercel.app') + '/api/contact', {
                 headers: { 'x-admin-key': password }
             })
             if (res.ok) {
@@ -53,7 +53,7 @@ const Admin = () => {
         if (!window.confirm('Are you sure you want to permanently delete this message?')) return;
 
         try {
-            const res = await fetch(`${import.meta.env.DEV ? 'http://localhost:5000' : ''}/api/contact/${id}`, {
+            const res = await fetch(`${import.meta.env.DEV ? 'http://localhost:5000' : 'https://contact-api-ruban200.vercel.app'}/api/contact/${id}`, {
                 method: 'DELETE',
                 headers: { 'x-admin-key': password }
             })
