@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Github, Linkedin, Send, Twitter, Instagram } from 'lucide-react'
+import BubblesButton from './BubblesButton'
 
 const Contact = () => {
     const [name, setName] = useState('')
@@ -102,7 +103,7 @@ const Contact = () => {
                                 <textarea value={message} onChange={(e) => setMessage(e.target.value)} id="message" rows="4" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none" placeholder="Hello Ruban..."></textarea>
                             </div>
                             <div>
-                                <button type="submit" onClick={async (e) => {
+                                <BubblesButton type="button" onClick={async (e) => {
                                     e.preventDefault()
                                     setStatus('sending')
                                     try {
@@ -125,10 +126,10 @@ const Contact = () => {
                                         setStatus('error')
                                         setError('Network error')
                                     }
-                                }} className="w-full bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-600 hover:to-cyan-600 text-white font-bold py-4 px-8 rounded-lg flex items-center justify-center gap-2 transition-all transform hover:-translate-y-1 shadow-lg shadow-indigo-500/25">
+                                }} className="w-full bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-600 hover:to-cyan-600 text-white font-bold py-4 px-8 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/25 border-none">
                                     {status === 'sending' ? 'Sending...' : 'Send Message'}
                                     <Send className="w-5 h-5" />
-                                </button>
+                                </BubblesButton>
                             </div>
                             {status === 'sent' && <p className="text-sm text-emerald-400">Thanks — your message was sent.</p>}
                             {status === 'error' && <p className="text-sm text-red-400">{error}</p>}

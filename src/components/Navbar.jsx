@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Github, Linkedin, Mail, Twitter, Instagram } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = React.useState(false)
@@ -19,26 +20,32 @@ const Navbar = () => {
     return (
         <nav className="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex items-center justify-between h-20">
                     <div className="flex-shrink-0">
-                        <a href="#home" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
-                            Ruban.
+                        <a href="#home" className="flex items-center gap-2">
+                            <img src="/images/professional-portfolio.png" alt="Logo" className="h-14 w-14 md:h-16 md:w-16 object-contain rounded-md shadow-sm border border-slate-700/50 transition-transform hover:scale-105" />
+                            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400 hidden sm:block">
+                            </span>
                         </a>
                     </div>
-                    <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-6">
-                            {navLinks.map((link) => (
+                    <div className="hidden md:flex flex-1 justify-center">
+                        <div className="nav-container max-w-4xl px-4 py-2 text-slate-300">
+                            {navLinks.map((link, index) => (
                                 <a
                                     key={link.name}
                                     href={link.path}
-                                    className="text-slate-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                                    className="nav-btn hover:text-cyan-400 text-lg px-6 py-2 font-medium transition-colors"
                                 >
                                     {link.name}
                                 </a>
                             ))}
+                            <svg className="nav-outline w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                                <rect className="nav-rect" width="100%" height="100%" rx="8" />
+                            </svg>
                         </div>
                     </div>
                     <div className="hidden md:flex items-center space-x-4">
+                        <ThemeToggle />
                         <a href="https://github.com/ruban200" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors" title="GitHub">
                             <Github className="w-5 h-5" />
                         </a>
@@ -84,13 +91,16 @@ const Navbar = () => {
                                 {link.name}
                             </a>
                         ))}
-                        <div className="flex space-x-4 px-3 py-2 mt-4 border-t border-slate-800">
-                            <a href="https://github.com/ruban200" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
-                                <Github className="w-5 h-5" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/ruban-raj-s-62880836a" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
-                                <Linkedin className="w-5 h-5" />
-                            </a>
+                        <div className="flex space-x-4 px-3 py-2 mt-4 border-t border-slate-800 items-center justify-between">
+                            <div className="flex space-x-4">
+                                <a href="https://github.com/ruban200" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
+                                    <Github className="w-5 h-5" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/ruban-raj-s-62880836a" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
+                                    <Linkedin className="w-5 h-5" />
+                                </a>
+                            </div>
+                            <ThemeToggle />
                         </div>
                     </div>
                 </motion.div>

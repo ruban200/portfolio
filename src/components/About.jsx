@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Terminal, Code2, Database, Layout } from 'lucide-react'
+import InfoCard from './InfoCard'
 
 const About = () => {
     const features = [
@@ -48,22 +49,7 @@ const About = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {features.map((feature, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:border-indigo-500/50 transition-colors group"
-                        >
-                            <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                {feature.icon}
-                            </div>
-                            <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                            <p className="text-slate-400 leading-relaxed">
-                                {feature.description}
-                            </p>
-                        </motion.div>
+                        <InfoCard key={index} index={index} icon={feature.icon} title={feature.title} description={feature.description} />
                     ))}
                 </div>
             </div>
