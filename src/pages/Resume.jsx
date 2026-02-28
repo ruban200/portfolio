@@ -78,7 +78,7 @@ const Resume = () => {
                                 <div className="absolute w-3 h-3 bg-cyan-400 rounded-full -left-[7px] top-1.5 ring-4 ring-slate-800"></div>
                                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
                                     <h4 className="text-lg font-medium text-white">Master of Computer Applications (MCA)</h4>
-                                    <span className="text-cyan-400 text-sm font-medium">2021 – 2024</span>
+                                    <span className="text-cyan-400 text-sm font-medium">2025 – 2027</span>
                                 </div>
                                 <p className="text-slate-400">Madurai Kamaraj University</p>
                             </div>
@@ -87,7 +87,7 @@ const Resume = () => {
                                 <div className="absolute w-3 h-3 bg-slate-600 rounded-full -left-[7px] top-1.5 ring-4 ring-slate-800 border-2 border-slate-800"></div>
                                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
                                     <h4 className="text-lg font-medium text-white">Bachelor of Science in Computer Science</h4>
-                                    <span className="text-slate-400 text-sm">2020 – 2021</span>
+                                    <span className="text-slate-400 text-sm">2021 – 2024</span>
                                 </div>
                             </div>
                         </div>
