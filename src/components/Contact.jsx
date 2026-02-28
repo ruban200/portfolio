@@ -92,11 +92,11 @@ const Contact = () => {
                         }}>
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-slate-400 mb-2">Your Name</label>
-                                <input value={name} onChange={(e) => setName(e.target.value)} type="text" id="name" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all" placeholder="John Doe" />
+                                <input value={name} onChange={(e) => setName(e.target.value)} type="text" id="name" autoComplete="name" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all" placeholder="John Doe" />
                             </div>
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-slate-400 mb-2">Your Email</label>
-                                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" id="email" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all" placeholder="john@example.com" />
+                                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" id="email" autoComplete="email" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all" placeholder="john@example.com" />
                             </div>
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-slate-400 mb-2">Message</label>

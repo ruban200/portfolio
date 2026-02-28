@@ -9,7 +9,14 @@ const app = express()
 const PORT = process.env.PORT || 5000
 const MYSQL_URI = process.env.MYSQL_URI
 
-app.use(cors())
+app.use(cors({
+    origin: [
+        'http://localhost:5173', // Vite dev server
+        'https://ruban200.github.io' // GitHub Pages deployment
+    ],
+    methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
+    credentials: true,
+}))
 app.use(express.json())
 
 let pool;
