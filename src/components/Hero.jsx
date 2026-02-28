@@ -42,7 +42,7 @@ const Hero = () => {
                             </svg>
                         </button>
                         <div className="profile-pic">
-                            <img src="/images/profile.jpg" alt="Ruban Raj.S" />
+                            <img src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt="Ruban Raj.S" />
                         </div>
                         <div className="bottom">
                             <div className="content">

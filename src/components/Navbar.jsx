@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-20">
                     <div className="flex-shrink-0">
                         <a href="#home" className="flex items-center gap-2">
-                            <img src="/images/professional-portfolio.png" alt="Logo" className="h-14 w-14 md:h-16 md:w-16 object-contain rounded-md shadow-sm border border-slate-700/50 transition-transform hover:scale-105" />
+                            <img src={`${import.meta.env.BASE_URL}images/professional-portfolio.png`} alt="Logo" className="h-14 w-14 md:h-16 md:w-16 object-contain rounded-md shadow-sm border border-slate-700/50 transition-transform hover:scale-105" />
                             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400 hidden sm:block">
                             </span>
                         </a>

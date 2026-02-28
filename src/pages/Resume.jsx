@@ -18,7 +18,7 @@ const Resume = () => {
                     </Link>
 
                     <a
-                        href="/resume.pdf"
+                        href={`${import.meta.env.BASE_URL}resume.pdf`}
                         download="Ruban_Resume.pdf"
                         className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg transition-colors shadow-lg shadow-indigo-500/20 font-medium"
                     >
