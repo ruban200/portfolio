@@ -114,7 +114,7 @@ app.post('/api/contact', async (req, res) => {
 })
 
 // Catch-all for debugging Vercel routing
-app.all('*', (req, res) => {
+app.use((req, res) => {
     res.status(404).json({
         error: "Route not matched in Express",
         method: req.method,
